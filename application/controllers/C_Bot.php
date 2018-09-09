@@ -14,7 +14,7 @@ class C_Bot extends CI_Controller {
 		$this->load->library('telegram');
 		$this->load->model('m_bot');
 		// Set the bot TOKEN
-		$bot_token = '593593994:AAGInR0jnWYEmnm_pF5bx5AMF-a8bUMVO28';
+		$bot_token = 'YOUR_TOKEN';
 		// Instances the class
 		$telegram = new Telegram($bot_token);
 
@@ -38,37 +38,37 @@ class C_Bot extends CI_Controller {
 		if ($callback_query !== null && $callback_query != '') {
 			$pilihan = $telegram->Callback_Data();
 			if($pilihan == 'loadkra'){
-				$url = "http://203.148.85.170:1888/C_Cek/cekkra";
+				$url = "http://your_url/C_Cek/cekkra";
 			}elseif($pilihan == 'loadmdn'){
-				$url = "http://203.148.85.170:1888/C_Cek/cekmdn";
+				$url = "http://your_url/C_Cek/cekmdn";
 			}elseif($pilihan == 'loadsmg'){
-				$url = "http://203.148.85.170:1888/C_Cek/ceksmg";
+				$url = "http://your_url/C_Cek/ceksmg";
 			}elseif($pilihan == 'loadmlg1'){
-				$url = "http://203.148.85.170:1888/C_Cek/cekmlg1";
+				$url = "http://your_url/C_Cek/cekmlg1";
 			}elseif($pilihan == 'loadmlg2'){
-				$url = "http://203.148.85.170:1888/C_Cek/cekmlg2";
+				$url = "http://your_url/C_Cek/cekmlg2";
 			}elseif($pilihan == 'hddkra'){
-				$url = "http://203.148.85.170:1888/C_Cek/hddkra";
+				$url = "http://your_url/C_Cek/hddkra";
 			}elseif($pilihan == 'hddsmg'){
-				$url = "http://203.148.85.170:1888/C_Cek/hddsmg";
+				$url = "http://your_url/C_Cek/hddsmg";
 			}elseif($pilihan == 'hddmdn'){
-				$url = "http://203.148.85.170:1888/C_Cek/hddmdn";
+				$url = "http://your_url/C_Cek/hddmdn";
 			}elseif($pilihan == 'hddmlg1'){
-				$url = "http://203.148.85.170:1888/C_Cek/hddmlg1";
+				$url = "http://your_url/C_Cek/hddmlg1";
 			}elseif($pilihan == 'hddmlg2'){
-				$url = "http://203.148.85.170:1888/C_Cek/hddmlg2";
+				$url = "http://your_url/C_Cek/hddmlg2";
 			}elseif($pilihan == 'memokra'){
-				$url = "http://203.148.85.170:1888/C_Cek/memokra";
+				$url = "http://your_url/C_Cek/memokra";
 			}elseif($pilihan == 'memomdn'){
-				$url = "http://203.148.85.170:1888/C_Cek/memomdn";
+				$url = "http://your_url/C_Cek/memomdn";
 			}elseif($pilihan == 'memosmg'){
-				$url = "http://203.148.85.170:1888/C_Cek/memosmg";
+				$url = "http://your_url/C_Cek/memosmg";
 			}elseif($pilihan == 'memomlg1'){
-				$url = "http://203.148.85.170:1888/C_Cek/memomlg1";
+				$url = "http://your_url/C_Cek/memomlg1";
 			}elseif($pilihan == 'memomlg2'){
-				$url = "http://203.148.85.170:1888/C_Cek/memomlg2";
+				$url = "http://your_url/C_Cek/memomlg2";
 			}elseif($pilihan == 'datafifdc'){
-		        $url = "http://203.148.85.170:1888/C_Cek/cekDataFIFDC";
+		        $url = "http://your_url/C_Cek/cekDataFIFDC";
 		    }
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
